@@ -1,0 +1,103 @@
+:root{
+    --color1:#143F69;
+    --color2: #fcb173;
+    --color3: #020f3b;
+    --color4: #FFF;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: var(--color1);   
+}
+
+.titulo {
+    color: var(--color4);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-decoration:underline;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    margin: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.card{
+    //background-color: var(--color4);
+    background-image: linear-gradient(to bottom, #7a7ce7, #f6f6f9);
+    width: 328px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+
+    &-header{
+        width: 100%;
+        display: block;
+    }
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid var(--color3);
+
+        &-contentimg{
+            border: 5px solid #020f3b;
+            border-radius: 50%;
+            //background-color: #2a355c;
+            background-color: rgb(221, 219, 219);
+            box-shadow: 0px 5px 20px #7a8fe0 ;
+            margin-top: calc(-80px - 8px);
+
+            &-img{
+                 padding: 0px;
+                 border-radius: 50%;
+            }
+        }
+        &-title{
+            margin-top: 2rem;
+            font-size: 3rem;
+            span {
+                color: var(--color3);
+            }
+        }
+        &-text{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+    &-footer{
+        display: flex;
+        justify-content: space-evenly;
+
+        &-op1{
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+    
+}
+
+@media (max-width: 680px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+}
