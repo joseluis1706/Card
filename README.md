@@ -1,1 +1,1 @@
-# Card de algunos personajes los supercampeones
+# Card de algunos personajes de los Supercampeones.
